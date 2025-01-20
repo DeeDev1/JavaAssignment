@@ -1,0 +1,197 @@
+1. WRITE A JAVA PROGRAM TO PRINT OUT THE FLAG OF NIGERIA AS SHOWN IN THIS SLIDE (IGNORE BACKGROUND). TO DO THIS, 
+   a.USE A SINGLE LOOP
+   b.USE A NESTED LOOP
+
+1a code. 
+public class NigerianFlagSingleLoop {
+    public static void main(String[] args) {
+        String flagRow = "* * * * == == == * * * *";
+        for (int i = 0; i < 5; i++) {
+            System.out.println(flagRow);
+        }
+    }
+}
+
+1b code. 
+public class NigerianFlagNestedLoop {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 12; j++) {
+                if (j < 4 || j >= 8) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("= ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+2. WRITE A JAVA PROGRAM TO PRINT OUT THE FLAG OF  AS SHOWN IN THIS SLIDE (IGNORE THE WHITE BACKGROUND). TO DO THIS, 
+   a.USE A SINGLE LOOP
+   b.USE A NESTED LOOP
+
+2a code. 
+public class USAFlagSingleLoop {
+    public static void main(String[] args) {
+        String[] flagRows = {
+            "* * * * = = = = = = =",
+            "* * * * = = = = = = =",
+            "* * * * = = = = = = =",
+            "= = = = = = = = = = =",
+            "= = = = = = = = = = =",
+            "= = = = = = = = = = ="
+        };
+
+        for (String row : flagRows) {
+            System.out.println(row);
+        }
+    }
+}
+
+2b code. 
+public class USAFlagNestedLoop {
+    public static void main(String[] args) {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 12; j++) {
+                if (i < 3 && j < 4) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("= ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+3. Consider an array that has the data shown below. Write a java program to do the following:
+   a.The mean. mean = sum of all element/number of element.
+   b.Print out the median. median = element at the middle
+   c.The standard deviation = √∑▒(x_i−μ)^2/N 
+	  where N is size of population, μ is the population mean
+	   x_i is each value from the population
+        2	5	5	9	4	7	0	9	6	11	12
+
+3 code. 
+import java.util.Arrays;
+
+public class ArrayStatistics {
+    public static void main(String[] args) {
+        int[] data = {2, 5, 9, 4, 7, 0, 9, 6, 11, 12};
+        
+        // Calculate the mean
+        double mean = calculateMean(data);
+        System.out.println("Mean: " + mean);
+        
+        // Calculate the median
+        double median = calculateMedian(data);
+        System.out.println("Median: " + median);
+        
+        // Calculate the standard deviation
+        double standardDeviation = calculateStandardDeviation(data, mean);
+        System.out.println("Standard Deviation: " + standardDeviation);
+    }
+
+    // Method to calculate mean
+    public static double calculateMean(int[] array) {
+        double sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return sum / array.length;
+    }
+
+    // Method to calculate median
+    public static double calculateMedian(int[] array) {
+        Arrays.sort(array); // Sort the array
+        int length = array.length;
+        if (length % 2 == 0) {
+            return (array[length / 2 - 1] + array[length / 2]) / 2.0;
+        } else {
+            return array[length / 2];
+        }
+    }
+
+    // Method to calculate standard deviation
+    public static double calculateStandardDeviation(int[] array, double mean) {
+        double sumSquaredDeviations = 0;
+        for (int num : array) {
+            sumSquaredDeviations += Math.pow(num - mean, 2);
+        }
+        return Math.sqrt(sumSquaredDeviations / array.length);
+    }
+}
+
+
+4. Declare an array of length 10.
+   a.Write a program using a loop to assign elements to the array by accepting input from the user. Make sure to state the index that the user’s input will be to the user before accepting the input.
+   b.Using a for each loop, print out the input entered by the user.
+
+4 code.
+import java.util.Scanner;
+
+public class ArrayInputAndOutput {
+    public static void main(String[] args) {
+        // Declare an array of length 10
+        int[] array = new int[10];
+        Scanner scanner = new Scanner(System.in);
+
+        //Assign elements to the array using a loop and user input
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("Enter value for index " + i + ": ");
+            array[i] = scanner.nextInt();
+        }
+
+        //Print out the input entered by the user using a for-each loop
+        System.out.println("\nValues entered by the user:");
+        for (int value : array) {
+            System.out.println(value);
+        }
+        
+        scanner.close();
+    }
+}
+
+5. Declare a 2D array of size 10 by 10.
+   a.Write a program using a loop to assign elements to the array by accepting input from the user. Make sure to state the index that the user’s input will be to the user before accepting the input.
+   b.Using a for each loop, print out the input entered by the user.
+
+5 code.
+import java.util.Scanner;
+
+public class TwoDArrayInput {
+    public static void main(String[] args) {
+        // Declare a 2D array of size 10x10
+        int[][] array = new int[10][10];
+        Scanner scanner = new Scanner(System.in);
+
+        //Assign elements to the array using nested loops
+        System.out.println("Enter 100 integers for the 2D array:");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print("Enter value for index [" + i + "][" + j + "]: ");
+                array[i][j] = scanner.nextInt();
+            }
+        }
+
+        //Print the input using a for-each loop
+        System.out.println("\nValues entered in the 2D array:");
+        for (int[] row : array) {
+            for (int value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println(); // Move to the next line after each row
+        }
+
+        scanner.close();
+    }
+}
+	
+
+	
+
+
+
