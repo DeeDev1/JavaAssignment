@@ -1,8 +1,8 @@
-1. WRITE A JAVA PROGRAM TO PRINT OUT THE FLAG OF NIGERIA AS SHOWN IN THIS SLIDE (IGNORE BACKGROUND). TO DO THIS, 
-   a.USE A SINGLE LOOP
-   b.USE A NESTED LOOP
+//1. WRITE A JAVA PROGRAM TO PRINT OUT THE FLAG OF NIGERIA AS SHOWN IN THIS SLIDE (IGNORE BACKGROUND). TO DO THIS, 
+//  a.USE A SINGLE LOOP
+//  b.USE A NESTED LOOP
 
-1a code. 
+//1a code.
 public class NigerianFlagSingleLoop {
     public static void main(String[] args) {
         String flagRow = "* * * * == == == * * * *";
@@ -12,7 +12,7 @@ public class NigerianFlagSingleLoop {
     }
 }
 
-1b code. 
+//1b code. 
 public class NigerianFlagNestedLoop {
     public static void main(String[] args) {
         for (int i = 0; i < 5; i++) {
@@ -28,11 +28,11 @@ public class NigerianFlagNestedLoop {
     }
 }
 
-2. WRITE A JAVA PROGRAM TO PRINT OUT THE FLAG OF  AS SHOWN IN THIS SLIDE (IGNORE THE WHITE BACKGROUND). TO DO THIS, 
-   a.USE A SINGLE LOOP
-   b.USE A NESTED LOOP
+//2. WRITE A JAVA PROGRAM TO PRINT OUT THE FLAG OF  AS SHOWN IN THIS SLIDE (IGNORE THE WHITE BACKGROUND). TO DO THIS, 
+//  a.USE A SINGLE LOOP
+//  b.USE A NESTED LOOP
 
-2a code. 
+//2a code. 
 public class USAFlagSingleLoop {
     public static void main(String[] args) {
         String[] flagRows = {
@@ -50,7 +50,7 @@ public class USAFlagSingleLoop {
     }
 }
 
-2b code. 
+//2b code. 
 public class USAFlagNestedLoop {
     public static void main(String[] args) {
         for (int i = 0; i < 6; i++) {
@@ -67,15 +67,15 @@ public class USAFlagNestedLoop {
 }
 
 
-3. Consider an array that has the data shown below. Write a java program to do the following:
-   a.The mean. mean = sum of all element/number of element.
-   b.Print out the median. median = element at the middle
-   c.The standard deviation = √∑▒(x_i−μ)^2/N 
-	  where N is size of population, μ is the population mean
-	   x_i is each value from the population
-        2	5	5	9	4	7	0	9	6	11	12
+//3. Consider an array that has the data shown below. Write a java program to do the following:
+//   a.The mean. mean = sum of all element/number of element.
+//   b.Print out the median. median = element at the middle
+//   c.The standard deviation = √∑▒(x_i−μ)^2/N 
+//	  where N is size of population, μ is the population mean
+//	   x_i is each value from the population
+//        2	5	5	9	4	7	0	9	6	11	12
 
-3 code. 
+//3 code. 
 import java.util.Arrays;
 
 public class ArrayStatistics {
@@ -126,11 +126,11 @@ public class ArrayStatistics {
 }
 
 
-4. Declare an array of length 10.
-   a.Write a program using a loop to assign elements to the array by accepting input from the user. Make sure to state the index that the user’s input will be to the user before accepting the input.
-   b.Using a for each loop, print out the input entered by the user.
+//4. Declare an array of length 10.
+//   a.Write a program using a loop to assign elements to the array by accepting input from the user. Make sure to state the index that the user’s input will be to the user before accepting the input.
+//  b.Using a for each loop, print out the input entered by the user.
 
-4 code.
+//4 code.
 import java.util.Scanner;
 
 public class ArrayInputAndOutput {
@@ -155,11 +155,11 @@ public class ArrayInputAndOutput {
     }
 }
 
-5. Declare a 2D array of size 10 by 10.
-   a.Write a program using a loop to assign elements to the array by accepting input from the user. Make sure to state the index that the user’s input will be to the user before accepting the input.
-   b.Using a for each loop, print out the input entered by the user.
+//5. Declare a 2D array of size 10 by 10.
+//   a.Write a program using a loop to assign elements to the array by accepting input from the user. Make sure to state the index that the user’s input will be to the user before accepting the input.
+//   b.Using a for each loop, print out the input entered by the user.
 
-5 code.
+//5 code.
 import java.util.Scanner;
 
 public class TwoDArrayInput {
